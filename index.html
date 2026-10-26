@@ -92,9 +92,9 @@ section[id]{scroll-margin-top:80px}
 
 /* HERO */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;background:#2a2322}
-.hero-bg{position:absolute;inset:0;z-index:-2;background:radial-gradient(70% 50% at 50% 30%,#4a4242 0%,#2d2626 45%,#170f0e 100%)}
-.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;opacity:.62}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,12,11,.35) 0%,rgba(18,12,11,.55) 45%,rgba(18,12,11,.85) 75%,var(--bg) 100%)}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:radial-gradient(70% 55% at 50% 35%,#6e6563 0%,#463e3d 45%,#1c1413 100%)}
+.hero-bg img{position:absolute;left:50%;top:0;height:100%;width:auto;max-width:none;transform:translateX(-50%);opacity:1;-webkit-mask-image:radial-gradient(closest-side at 50% 48%,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side at 50% 48%,#000 62%,transparent 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,12,11,.05) 0%,rgba(18,12,11,.18) 50%,rgba(18,12,11,.6) 82%,var(--bg) 100%)}
 .hero .wrap{padding-top:120px;padding-bottom:70px}
 .hero .label{color:rgba(239,230,220,.86)}
 .hero h1{font-size:clamp(2.6rem,1.6rem + 4.6vw,5rem);margin-top:22px;line-height:1.02}
@@ -104,11 +104,11 @@ section[id]{scroll-margin-top:80px}
 .scroll{display:inline-flex;align-items:center;gap:10px;margin-top:46px;font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--muted);text-decoration:none}
 .scroll svg{width:13px;height:13px;animation:nudge 2s ease-in-out infinite}
 @keyframes nudge{50%{transform:translateY(4px)}}
-@media (min-width:900px){.hero-bg img{left:auto;right:0;width:58%;opacity:.9;object-position:50% 25%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 35%);mask-image:linear-gradient(90deg,transparent 0%,#000 35%)}.hero::after{background:linear-gradient(90deg,var(--bg) 0%,rgba(18,12,11,.75) 40%,rgba(18,12,11,.15) 70%,rgba(18,12,11,.2) 100%),linear-gradient(180deg,transparent 70%,var(--bg) 100%)}.hero .wrap{padding-top:100px}}
+@media (min-width:900px){.hero-bg img{left:68%}.hero::after{background:linear-gradient(90deg,rgba(18,12,11,.7) 0%,rgba(18,12,11,.25) 45%,rgba(18,12,11,0) 70%),linear-gradient(180deg,transparent 75%,var(--bg) 100%)}.hero .wrap{padding-top:100px}}
 
 /* Entrada do hero */
-.js .hero-bg img{filter:blur(18px);transform:scale(1.06)}
-.ready .hero-bg img{filter:none;transform:none;transition:filter 1.8s var(--ease),opacity 1.8s var(--ease),transform 2.4s var(--ease)}
+.js .hero-bg img{filter:blur(18px);transform:translateX(-50%) scale(1.06)}
+.ready .hero-bg img{filter:none;transform:translateX(-50%);transition:filter 1.8s var(--ease),opacity 1.8s var(--ease),transform 2.4s var(--ease)}
 .js .hero .in-a{opacity:0;transform:translateY(16px);filter:blur(6px)}
 .ready .hero .in-a{opacity:1;transform:none;filter:none;transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);transition-delay:calc(.5s + var(--d,0) * .14s)}
 
@@ -313,7 +313,7 @@ section[id]{scroll-margin-top:80px}
 
 <!-- ===== PÁGINA INICIAL ===== -->
 <section class="hero" id="inicio" data-home>
-  <div class="hero-bg" aria-hidden="true"><img src="assets/pabiana-em-pe.webp" width="520" height="650" alt=""></div>
+  <div class="hero-bg" aria-hidden="true"><img src="assets/hero.webp" width="576" height="765" alt=""></div>
   <div class="wrap">
     <p class="label in-a" style="--d:0">Teófilo Otoni — Minas Gerais</p>
     <h1 class="in-a" style="--d:1">Studio Pabiana<br><em>Oliveira</em></h1>
@@ -447,6 +447,10 @@ section[id]{scroll-margin-top:80px}
   </div>
 </section>
 
+
+<div data-home>
+  <div class="photo"><div class="frame" data-reveal><img src="assets/pabiana-em-pe.webp" width="520" height="650" alt="Pabiana Oliveira de blazer vermelho, sorrindo e segurando um secador" loading="lazy"></div></div>
+</div>
 
 <!-- Liso Perfeito -->
 <section class="sec liso" id="liso" data-home>
