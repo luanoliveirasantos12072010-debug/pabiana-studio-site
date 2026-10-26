@@ -77,7 +77,9 @@ section[id]{scroll-margin-top:80px}
 .desk-nav{display:none;gap:30px;align-items:center}
 .desk-nav a{text-decoration:none;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);transition:color .3s}
 .desk-nav a:hover{color:var(--fg)}
-@media (min-width:1000px){.desk-nav{display:flex}.menu-btn{display:none}}
+@media (min-width:1000px){.top .wrap,.hero .wrap{max-width:none;padding-left:max(64px,var(--gl));padding-right:max(64px,var(--gr))}.top .wrap{gap:40px}.desk-nav{margin-right:auto;margin-left:40px}}
+.top-cta{display:none;min-height:44px;padding:0 24px;font-size:11.5px;color:var(--gold-1)}
+@media (min-width:1000px){.desk-nav{display:flex}.menu-btn{display:none}.top-cta{display:inline-flex}}
 
 /* Menu em tela cheia */
 .overlay{position:fixed;inset:0;z-index:80;background:var(--bg);display:flex;flex-direction:column;padding:env(safe-area-inset-top,0px) 0 0;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
@@ -93,8 +95,8 @@ section[id]{scroll-margin-top:80px}
 /* HERO */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;background:#2a2322}
 .hero-bg{position:absolute;inset:0;z-index:-2;background:radial-gradient(70% 55% at 50% 35%,#6e6563 0%,#463e3d 45%,#1c1413 100%)}
-.hero-bg img{position:absolute;left:50%;top:0;height:100%;width:auto;max-width:none;transform:translateX(-50%);opacity:1;-webkit-mask-image:radial-gradient(closest-side at 50% 48%,#000 62%,transparent 100%);mask-image:radial-gradient(closest-side at 50% 48%,#000 62%,transparent 100%)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,12,11,.05) 0%,rgba(18,12,11,.18) 50%,rgba(18,12,11,.6) 82%,var(--bg) 100%)}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% 50%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,var(--bg) 0%,rgba(18,12,11,.55) 50%,rgba(18,12,11,.7) 100%),linear-gradient(to right,rgba(18,12,11,.85) 0%,rgba(18,12,11,.2) 50%,transparent 100%)}
 .hero .wrap{padding-top:120px;padding-bottom:70px}
 .hero .label{color:rgba(239,230,220,.86)}
 .hero h1{font-size:clamp(2.6rem,1.6rem + 4.6vw,5rem);margin-top:22px;line-height:1.02}
@@ -104,17 +106,17 @@ section[id]{scroll-margin-top:80px}
 .scroll{display:inline-flex;align-items:center;gap:10px;margin-top:46px;font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--muted);text-decoration:none}
 .scroll svg{width:13px;height:13px;animation:nudge 2s ease-in-out infinite}
 @keyframes nudge{50%{transform:translateY(4px)}}
-@media (min-width:900px){.hero-bg img{left:68%}.hero::after{background:linear-gradient(90deg,rgba(18,12,11,.7) 0%,rgba(18,12,11,.25) 45%,rgba(18,12,11,0) 70%),linear-gradient(180deg,transparent 75%,var(--bg) 100%)}.hero .wrap{padding-top:100px}}
+@media (min-width:900px){.hero .wrap{padding-top:110px}.hero h1{font-size:clamp(5rem,3rem + 5vw,8rem);line-height:.98;letter-spacing:-.02em}.hero p.lead{font-size:17.5px;max-width:34em}.hero .btn-row{flex-direction:row;align-items:center}}
 
 /* Entrada do hero */
-.js .hero-bg img{filter:blur(18px);transform:translateX(-50%) scale(1.06)}
-.ready .hero-bg img{filter:none;transform:translateX(-50%);transition:filter 1.8s var(--ease),opacity 1.8s var(--ease),transform 2.4s var(--ease)}
+.js .hero-bg img{filter:blur(14px);transform:scale(1.08)}
+.ready .hero-bg img{filter:none;transform:scale(1.04);transition:filter 1.8s var(--ease),opacity 1.8s var(--ease),transform 2.4s var(--ease)}
 .js .hero .in-a{opacity:0;transform:translateY(16px);filter:blur(6px)}
 .ready .hero .in-a{opacity:1;transform:none;filter:none;transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);transition-delay:calc(.5s + var(--d,0) * .14s)}
 
 /* Fotos de página inteira */
 .photo{padding-left:var(--gl);padding-right:var(--gr);max-width:1120px;margin:0 auto}
-.photo .frame{overflow:hidden;max-width:560px}
+.photo .frame{overflow:hidden;max-width:620px}
 .photo img{width:100%;height:auto;transition:transform 1.6s var(--ease)}
 .photo.center .frame{margin:0 auto}
 
@@ -207,7 +209,7 @@ section[id]{scroll-margin-top:80px}
 .res h2{font-size:clamp(2.6rem,2rem + 2.4vw,3.6rem);margin-top:16px}
 .track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:36px var(--gr) 10px var(--gl);scrollbar-width:none}
 .track::-webkit-scrollbar{display:none}
-.slide{position:relative;flex:0 0 82%;max-width:440px;scroll-snap-align:start;aspect-ratio:442/440;overflow:hidden}
+.slide{position:relative;flex:0 0 82%;max-width:420px;scroll-snap-align:start;aspect-ratio:4/5;overflow:hidden}
 .slide img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .slide:hover img{transform:scale(1.04)}
 .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(18,12,11,.75))}
@@ -288,8 +290,9 @@ section[id]{scroll-margin-top:80px}
   <div class="wrap">
     <a class="logo" href="#inicio" data-go-home><b>Pabiana Oliveira</b><small>Studio de Beleza</small></a>
     <nav class="desk-nav" aria-label="Seções">
-      <a href="#servicos" data-go-home>Serviços</a><a href="#tratamentos" data-go-home>Tratamentos</a><a href="#liso" data-go-home>Liso Perfeito</a><a href="#onde" data-go-home>Onde estamos</a><a href="#trabalhos">Nossos trabalhos</a>
+      <a href="#servicos" data-go-home>Serviços</a><a href="#tratamentos" data-go-home>Tratamentos</a><a href="#liso" data-go-home>Liso Perfeito</a><a href="#onde" data-go-home>Onde estamos</a><a href="#trabalhos">Trabalhos</a>
     </nav>
+    <a class="btn btn-line top-cta" data-wa href="#" target="_blank" rel="noopener">Agendar</a>
     <button class="menu-btn" id="open-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 7h14M5 12h14M5 17h14"/></svg></button>
   </div>
 </header>
@@ -313,7 +316,7 @@ section[id]{scroll-margin-top:80px}
 
 <!-- ===== PÁGINA INICIAL ===== -->
 <section class="hero" id="inicio" data-home>
-  <div class="hero-bg" aria-hidden="true"><img src="assets/hero.webp" width="576" height="765" alt=""></div>
+  <div class="hero-bg" aria-hidden="true"><img src="assets/hero.webp" width="1066" height="1600" alt="Pabiana Oliveira no Studio de Beleza Pabiana Oliveira"></div>
   <div class="wrap">
     <p class="label in-a" style="--d:0">Teófilo Otoni — Minas Gerais</p>
     <h1 class="in-a" style="--d:1">Studio Pabiana<br><em>Oliveira</em></h1>
@@ -327,7 +330,7 @@ section[id]{scroll-margin-top:80px}
 </section>
 
 <div data-home>
-  <div class="photo center" style="padding-top:40px"><div class="frame" data-reveal><img src="assets/pabiana-pb.webp" width="520" height="694" alt="Pabiana Oliveira sorrindo, em foto preto e branco" loading="lazy"></div></div>
+  <div class="photo center" style="padding-top:40px"><div class="frame" data-reveal><img src="assets/pabiana-pb.webp" width="1066" height="1600" alt="Pabiana Oliveira sorrindo, em foto preto e branco" loading="lazy"></div></div>
 </div>
 
 <section class="sec studio" id="studio" data-home>
@@ -382,7 +385,7 @@ section[id]{scroll-margin-top:80px}
           <div class="item"><b>Combo cabelo todo</b><span class="pr">A partir de R$ 270</span><small>Coloração/tonalizante linha profissional + Tratamento pós química + Finalização</small></div>
         </div></div></div>
       </div>
-      <div class="svc-photo" data-reveal><img src="assets/pabiana-sentada.webp" width="520" height="781" alt="Pabiana Oliveira sentada com blazer vermelho, ao lado de secadores e pranchas" loading="lazy"></div>
+      <div class="svc-photo" data-reveal><img src="assets/pabiana-sentada.webp" width="1066" height="1600" alt="Pabiana Oliveira sentada com blazer vermelho, ao lado de secadores e pranchas" loading="lazy"></div>
       <div class="box static" data-reveal>
         <h3>Maquiagens</h3>
         <div class="items">
@@ -449,7 +452,7 @@ section[id]{scroll-margin-top:80px}
 
 
 <div data-home>
-  <div class="photo"><div class="frame" data-reveal><img src="assets/pabiana-em-pe.webp" width="520" height="650" alt="Pabiana Oliveira de blazer vermelho, sorrindo e segurando um secador" loading="lazy"></div></div>
+  <div class="photo"><div class="frame" data-reveal><img src="assets/pabiana-em-pe.webp" width="1087" height="1599" alt="Pabiana Oliveira de blazer vermelho, sorrindo e segurando um secador" loading="lazy"></div></div>
 </div>
 
 <!-- Liso Perfeito -->
@@ -503,14 +506,15 @@ section[id]{scroll-margin-top:80px}
     <h2 data-reveal>Resultados</h2>
   </div>
   <div class="track" id="track">
-    <figure class="slide" style="margin:0"><img src="assets/espaco.webp" width="442" height="440" alt="Recepção do studio com poltronas rosadas e o letreiro Pabiana Oliveira" loading="lazy"><span>O espaço</span></figure>
-    <figure class="slide" style="margin:0"><img src="assets/recepcao.webp" width="520" height="426" alt="Poltronas e arranjo de flores na recepção do studio" loading="lazy"><span>Recepção</span></figure>
+    <figure class="slide" style="margin:0"><img src="assets/espaco.webp" width="1200" height="1600" alt="Parede com a marca Studio de Beleza Pabiana Oliveira" loading="lazy"><span>O espaço</span></figure>
+    <figure class="slide" style="margin:0"><img src="assets/recepcao.webp" width="1200" height="1600" alt="Recepção do Studio Pabiana Oliveira" loading="lazy"><span>Recepção</span></figure>
+    <figure class="slide" style="margin:0"><img src="assets/espera.webp" width="983" height="1600" alt="Recepção com poltronas rosé e arranjo de flores" loading="lazy"><span>Espera</span></figure>
   </div>
   <div class="dots" id="dots"></div>
 </section>
 
 <div data-home>
-  <div class="photo center"><div class="frame" data-reveal style="max-width:576px"><img src="assets/pabiana-atendimento.webp" width="576" height="866" alt="Pabiana Oliveira sorrindo, sentada com um tablet" loading="lazy"></div></div>
+  <div class="photo center"><div class="frame" data-reveal style="max-width:576px"><img src="assets/pabiana-atendimento.webp" width="1066" height="1600" alt="Pabiana Oliveira sorrindo, sentada com um tablet" loading="lazy"></div></div>
 </div>
 
 <!-- Agende -->
@@ -548,7 +552,7 @@ section[id]{scroll-margin-top:80px}
         <a class="btn btn-line" data-maps href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Como chegar</a>
       </div>
       <div class="map" id="map" data-reveal><div class="ph">City Shopping · Rua Jorge Mattar, 40<br>Teófilo Otoni - MG</div></div>
-      <div class="where-photo" data-reveal><img src="assets/recepcao.webp" width="520" height="426" alt="Recepção do Studio Pabiana Oliveira" loading="lazy"></div>
+      <div class="where-photo" data-reveal><img src="assets/sala.webp" width="1200" height="1600" alt="Ambiente interno do Studio Pabiana Oliveira" loading="lazy"></div>
     </div>
   </div>
 </section>
