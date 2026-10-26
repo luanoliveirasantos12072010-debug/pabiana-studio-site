@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Studio Pabiana Oliveira</title>
+<meta name="description" content="Studio Pabiana Oliveira — studio de beleza em Teófilo Otoni (MG), no City Shopping. Cabelos, sobrancelhas, maquiagem, tratamentos e Protocolo Liso Perfeito.">
+<meta name="theme-color" content="#120c0b">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Studio Pabiana Oliveira · Studio de Beleza">
+<meta property="og:description" content="Cabelo, sobrancelhas e maquiagem em Teófilo Otoni (MG). Agende pelo WhatsApp (33) 98815-3303.">
+<meta property="og:image" content="assets/pabiana-pb.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23120c0b'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23e9d6b8'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Visual escuro e editorial: preto amarronzado, serifa clássica, rótulos espaçados,
+   caixas com fio fino e botão dourado-champanhe. */
+:root{
+  --bg:#120c0b;
+  --bg-2:#170f0e;
+  --card:#150e0d;
+  --line:rgba(236,222,206,.16);
+  --line-2:rgba(236,222,206,.09);
+  --fg:#efe6dc;
+  --muted:#b4a69b;
+  --dim:#8d7f76;
+  --gold-1:#f4e6cd;
+  --gold-2:#d8bd96;
+  --ink:#24180f;
+  --wa:#25d366;
+  --f-serif:"Cormorant Garamond","Cormorant",Garamond,Georgia,serif;
+  --f-sans:"Jost","Futura","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --gl:max(20px, env(safe-area-inset-left, 0px));
+  --gr:max(20px, env(safe-area-inset-right, 0px));
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font:300 16px/1.6 var(--f-sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-serif);font-weight:400;margin:0;line-height:1.08;letter-spacing:.005em}
+h1 em,h2 em{font-style:italic;font-weight:300}
+p{margin:0}
+:focus-visible{outline:1px solid var(--gold-2);outline-offset:4px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
+section[id]{scroll-margin-top:80px}
+.label{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--fg);font-weight:400}
+.label.dim{color:var(--muted)}
+.sec{padding-block:80px}
+.hr{border:0;border-top:1px solid var(--line);margin:0}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:0 30px;border-radius:999px;font:400 12px/1 var(--f-sans);letter-spacing:.28em;text-transform:uppercase;text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .4s var(--ease),box-shadow .4s var(--ease),background .4s,border-color .4s,color .4s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:linear-gradient(100deg,var(--gold-1) 0%,#ecd7b5 55%,var(--gold-2) 100%);color:var(--ink);box-shadow:0 10px 34px -10px rgba(216,189,150,.55)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(216,189,150,.75)}
+.btn-line{border:1px solid var(--line);color:var(--fg);background:transparent}
+.btn-line:hover{border-color:var(--gold-2);color:var(--gold-1)}
+.btn-row{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+
+/* Cabeçalho */
+.top{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);z-index:50;transition:background .4s,border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
+.top.solid{background:rgba(18,12,11,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line-2)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{text-decoration:none;line-height:1}
+.logo b{display:block;font:400 21px/1 var(--f-serif);letter-spacing:.2em;text-transform:uppercase}
+.logo small{display:block;font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+.menu-btn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(18,12,11,.25);color:var(--fg);display:grid;place-items:center;cursor:pointer;transition:border-color .3s}
+.menu-btn:hover{border-color:var(--gold-2)}
+.menu-btn svg{width:18px;height:18px}
+.desk-nav{display:none;gap:30px;align-items:center}
+.desk-nav a{text-decoration:none;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);transition:color .3s}
+.desk-nav a:hover{color:var(--fg)}
+@media (min-width:1000px){.desk-nav{display:flex}.menu-btn{display:none}}
+
+/* Menu em tela cheia */
+.overlay{position:fixed;inset:0;z-index:80;background:var(--bg);display:flex;flex-direction:column;padding:env(safe-area-inset-top,0px) 0 0;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
+.overlay.open{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
+.overlay .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.overlay nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:4px;padding-left:var(--gl);padding-right:var(--gr)}
+.overlay nav a{font:400 clamp(2.2rem,9vw,3rem)/1.2 var(--f-serif);text-decoration:none;opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease),color .3s}
+.overlay.open nav a{opacity:1;transform:none}
+.overlay nav a:hover{color:var(--gold-1)}
+.overlay nav a:nth-child(1){transition-delay:.08s}.overlay nav a:nth-child(2){transition-delay:.14s}.overlay nav a:nth-child(3){transition-delay:.2s}.overlay nav a:nth-child(4){transition-delay:.26s}.overlay nav a:nth-child(5){transition-delay:.32s}
+.overlay nav .btn{align-self:flex-start;margin-top:36px}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;background:#2a2322}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:radial-gradient(70% 50% at 50% 30%,#4a4242 0%,#2d2626 45%,#170f0e 100%)}
+.hero-bg img{position:absolute;left:50%;bottom:6%;height:86%;width:auto;max-width:none;transform:translateX(-50%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 14%,#000 70%,transparent 100%),linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,transparent 0%,#000 14%,#000 70%,transparent 100%);mask-composite:intersect;opacity:.95}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,12,11,.15) 0%,rgba(18,12,11,.25) 55%,var(--bg) 100%)}
+.hero .wrap{padding-top:120px;padding-bottom:70px}
+.hero .label{color:rgba(239,230,220,.86)}
+.hero h1{font-size:clamp(2.6rem,1.6rem + 4.6vw,5rem);margin-top:22px;line-height:1.02}
+.hero h1 em{color:var(--gold-1)}
+.hero p.lead{max-width:30em;margin-top:26px;color:rgba(239,230,220,.78);font-size:16px;line-height:1.75}
+.hero .btn-row{margin-top:34px}
+.scroll{display:inline-flex;align-items:center;gap:10px;margin-top:46px;font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.scroll svg{width:13px;height:13px;animation:nudge 2s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(4px)}}
+@media (min-width:900px){.hero-bg img{left:68%;height:96%;bottom:0}.hero .wrap{padding-top:100px}}
+
+/* Entrada do hero */
+.js .hero-bg img{filter:blur(18px);opacity:.4;transform:translateX(-50%) scale(1.06)}
+.ready .hero-bg img{filter:none;opacity:.95;transform:translateX(-50%);transition:filter 1.8s var(--ease),opacity 1.8s var(--ease),transform 2.4s var(--ease)}
+.js .hero .in-a{opacity:0;transform:translateY(16px);filter:blur(6px)}
+.ready .hero .in-a{opacity:1;transform:none;filter:none;transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);transition-delay:calc(.5s + var(--d,0) * .14s)}
+
+/* Fotos de página inteira */
+.photo{padding-left:var(--gl);padding-right:var(--gr);max-width:1120px;margin:0 auto}
+.photo .frame{overflow:hidden;max-width:560px}
+.photo img{width:100%;height:auto;transition:transform 1.6s var(--ease)}
+.photo.center .frame{margin:0 auto}
+
+/* O Studio */
+.studio-grid{display:grid;gap:30px}
+.studio h2{font-size:clamp(2rem,1.6rem + 1.8vw,2.8rem);margin-top:18px}
+.studio p{color:var(--muted);margin-top:22px;max-width:34em;line-height:1.75}
+.cats{border:1px solid var(--line);margin-top:32px}
+.cats div{font:400 22px/1 var(--f-serif);padding:24px 22px;border-top:1px solid var(--line)}
+.cats div:first-child{border-top:0}
+@media (min-width:900px){.studio-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:70px;align-items:center}}
+
+/* Faixa */
+.marquee{border-block:1px solid var(--line-2);overflow:hidden;padding-block:22px;margin-top:20px}
+.marquee .t{display:flex;width:max-content;animation:mq 34s linear infinite}
+.marquee span{font:400 22px/1 var(--f-serif);letter-spacing:.06em;display:inline-flex;align-items:center;gap:26px;padding-right:26px;white-space:nowrap}
+.marquee span::after{content:"✦";color:var(--gold-2);font-size:15px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Serviços */
+.svc-head h2{font-size:clamp(2.3rem,1.8rem + 2vw,3.2rem);margin-top:16px}
+.svc-head p{color:var(--muted);margin-top:16px;max-width:30em;font-size:14.5px;line-height:1.7}
+.svc-list{display:flex;flex-direction:column;gap:14px;margin-top:40px}
+.box{border:1px solid var(--line);background:var(--card)}
+.acc > button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 22px;cursor:pointer;font:400 25px/1.15 var(--f-serif)}
+.acc > button:focus-visible{outline:1px solid var(--gold-2);outline-offset:-4px}
+.acc .ic{position:relative;width:16px;height:16px;flex:none;transition:transform .45s var(--ease)}
+.acc .ic::before,.acc .ic::after{content:"";position:absolute;left:50%;top:50%;width:15px;height:1px;background:var(--fg);transform:translate(-50%,-50%)}
+.acc .ic::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acc.open .ic{transform:rotate(45deg)}
+.acc .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.acc.open .body{grid-template-rows:1fr}
+.acc .body>div{overflow:hidden}
+.items{padding:6px 22px 24px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 18px;padding:16px 0;border-top:1px solid var(--line-2)}
+.item:first-child{border-top:0}
+.item b{font-weight:400;font-size:14.5px;color:var(--fg)}
+.item .pr{font:400 19px/1.2 var(--f-serif);color:var(--fg);text-align:right;white-space:nowrap}
+.item .pr.sm{font:400 10.5px/1.4 var(--f-sans);letter-spacing:.24em;text-transform:uppercase;color:var(--muted);align-self:center}
+.item small{grid-column:1 / -1;color:var(--muted);font-size:13px;line-height:1.55;max-width:26em}
+.sub{border:1px solid var(--line);margin-top:10px;padding:18px 18px 6px}
+.sub .label{font-size:10px;letter-spacing:.36em}
+.sub .item{padding:14px 0}
+.static h3{font-size:31px;padding:26px 22px 4px}
+.svc-photo{margin-block:6px}
+.svc-photo img{width:100%;height:auto}
+@media (min-width:900px){
+  .svc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+  .svc-photo{grid-row:span 2}
+  .acc > button{cursor:default}
+  .acc .ic{display:none}
+  .acc .body{grid-template-rows:1fr}
+}
+
+/* Tratamentos */
+.trt h2{font-size:clamp(2.3rem,1.8rem + 2vw,3.2rem);margin-top:16px}
+.trt .note{margin-top:18px;font-size:15px;color:var(--fg)}
+.trt-grid{display:grid;gap:14px;margin-top:40px}
+.trt-card{border:1px solid var(--line);background:var(--card);padding:24px 18px 18px}
+.trt-card h3{font-size:26px;margin-bottom:16px;padding-left:4px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair div{border:1px solid var(--line);padding:14px 14px 12px}
+.pair small{display:block;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.pair span{font:400 21px/1 var(--f-serif)}
+.crono{margin-top:50px;padding-top:44px;border-top:1px solid var(--line)}
+.crono .label{font-size:11px}
+.crono p{color:var(--muted);margin-top:14px;font-size:14.5px}
+.crono .row{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-top:1px solid var(--line-2)}
+.crono .row:first-of-type{border-top:0}
+.crono .row b{font-weight:400;font-size:14.5px}
+.crono .row span{font:400 21px/1 var(--f-serif)}
+.crono .small{font-size:12.5px;color:var(--muted);margin-top:16px}
+@media (min-width:900px){.trt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.crono{max-width:560px}}
+
+/* Liso Perfeito */
+.liso .ttl{text-align:center;font-size:clamp(2.4rem,1.8rem + 2.4vw,3.4rem)}
+.liso .ttl em{display:block;color:var(--gold-1)}
+.liso-grid{display:grid;gap:16px;margin-top:46px}
+.lbox{border:1px solid var(--line);background:var(--card);padding:30px 22px 12px}
+.lbox .label{font-size:11px;letter-spacing:.42em;line-height:1.7}
+.lbox .lsub{color:var(--muted);font-size:13.5px;margin-top:8px}
+.lbox .items{padding:16px 0 8px}
+.lbox .inc{font-size:15px;padding:12px 0 18px}
+.lbox.hl{border-color:rgba(216,189,150,.45)}
+.extras{margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
+.extras .items{padding:20px 0 0}
+@media (min-width:900px){.liso-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}}
+
+/* Resultados */
+.res h2{font-size:clamp(2.6rem,2rem + 2.4vw,3.6rem);margin-top:16px}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:36px var(--gr) 10px var(--gl);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.slide{position:relative;flex:0 0 82%;max-width:440px;scroll-snap-align:start;aspect-ratio:442/440;overflow:hidden}
+.slide img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.slide:hover img{transform:scale(1.04)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(18,12,11,.75))}
+.slide span{position:absolute;left:18px;bottom:16px;z-index:1;font:400 22px/1 var(--f-serif)}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
+.dots button{width:30px;height:2px;border:0;padding:0;background:var(--line);cursor:pointer;transition:background .3s,width .3s}
+.dots button.on{background:var(--fg);width:44px}
+@media (min-width:900px){.track{padding-left:max(40px,calc((100vw - 1060px)/2))}.slide{flex-basis:440px}}
+
+/* Agende */
+.agenda h2{font-size:clamp(2.4rem,1.9rem + 2vw,3.3rem);margin-top:16px}
+.agenda h2 em{color:var(--gold-1)}
+.agenda p.l{color:var(--muted);margin-top:22px;max-width:30em;line-height:1.75}
+.hours{margin-top:28px;padding-left:22px;border-left:1px solid var(--line)}
+.hours b{display:block;font-weight:400;font-size:15px}
+.hours small{display:block;color:var(--muted);font-size:13.5px;margin-top:8px}
+.agenda .btn{margin-top:36px}
+.agenda .tel{display:block;margin-top:22px;letter-spacing:.2em;color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums;user-select:all}
+.agenda-grid{display:grid;gap:40px}
+@media (min-width:900px){.agenda-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:70px;align-items:center}}
+
+/* Siga */
+.follow{text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.follow h2{font-size:clamp(1.9rem,1.5rem + 1.4vw,2.5rem)}
+.follow .handle{display:block;margin-top:18px;letter-spacing:.14em;color:var(--fg);font-size:16px;text-decoration:none}
+.follow .btns{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:34px}
+
+/* Onde estamos */
+.where h2{font-size:clamp(2.4rem,1.9rem + 2vw,3.3rem);margin-top:16px}
+.where-grid{display:grid;gap:18px;margin-top:40px}
+.addr{border:1px solid var(--line);background:var(--card);padding:30px 22px}
+.addr address{font-style:normal;font-size:16.5px;line-height:1.85;color:rgba(239,230,220,.86)}
+.addr .btn{margin-top:28px}
+.map{position:relative;min-height:300px;border:1px solid var(--line);overflow:hidden;background:#1d1514}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.15) contrast(.95)}
+.map .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);font-size:13px;padding:20px}
+.where-photo img{width:100%;height:auto}
+@media (min-width:900px){.where-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(0,1fr);align-items:stretch}.where-photo img{height:100%;object-fit:cover}}
+
+/* Rodapé */
+.foot{padding-block:70px calc(110px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line-2)}
+.foot h2{font-size:24px;letter-spacing:.14em}
+.foot .info{margin-top:28px;display:flex;flex-direction:column;gap:10px;font-size:14.5px;color:var(--muted)}
+.foot .info a{color:var(--fg);text-decoration:none}
+.foot .addrs{margin-top:28px;font-size:14px;color:var(--muted);line-height:1.7;max-width:34em}
+.foot .copy{text-align:center;margin-top:46px;font-size:11px;letter-spacing:.36em;text-transform:uppercase;color:var(--muted)}
+
+/* WhatsApp flutuante */
+.wa{position:fixed;z-index:70;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.55);text-decoration:none;transition:transform .35s var(--ease)}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:28px;height:28px}
+
+/* Nossos trabalhos (página interna) */
+.view-trabalhos [data-home]{display:none!important}
+[data-trab]{display:none}
+.view-trabalhos [data-trab]{display:block}
+.trab{padding-top:130px;padding-bottom:30px}
+.trab h1{font-size:clamp(2.6rem,2rem + 2.4vw,3.6rem);margin-top:18px}
+.trab h1 em{color:var(--gold-1)}
+.trab p{color:var(--muted);margin-top:18px;max-width:28em}
+.trab .btn{margin-top:34px}
+.gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:46px;max-width:560px}
+.gal img{width:100%;height:auto;display:block}
+.gal .full{grid-column:1 / -1}
+@media (min-width:900px){.gal{max-width:1040px;grid-template-columns:repeat(4,minmax(0,1fr))}.gal .full{grid-column:span 2;grid-row:span 2}}
+
+/* Revelação na rolagem */
+.pre{opacity:0;transform:translateY(26px)}
+.pre.in{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" data-go-home><b>Pabiana Oliveira</b><small>Studio de Beleza</small></a>
+    <nav class="desk-nav" aria-label="Seções">
+      <a href="#servicos" data-go-home>Serviços</a><a href="#tratamentos" data-go-home>Tratamentos</a><a href="#liso" data-go-home>Liso Perfeito</a><a href="#onde" data-go-home>Onde estamos</a><a href="#trabalhos">Nossos trabalhos</a>
+    </nav>
+    <button class="menu-btn" id="open-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 7h14M5 12h14M5 17h14"/></svg></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="wrap">
+    <span class="logo"><b>Pabiana Oliveira</b><small>Studio de Beleza</small></span>
+    <button class="menu-btn" id="close-menu" type="button" aria-label="Fechar menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav>
+    <a href="#servicos" data-go-home>Serviços</a>
+    <a href="#tratamentos" data-go-home>Tratamentos</a>
+    <a href="#liso" data-go-home>Liso Perfeito</a>
+    <a href="#onde" data-go-home>Onde estamos</a>
+    <a href="#trabalhos">Nossos trabalhos</a>
+    <a class="btn btn-gold" data-wa href="#" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+  </nav>
+</div>
+
+<main>
+
+<!-- ===== PÁGINA INICIAL ===== -->
+<section class="hero" id="inicio" data-home>
+  <div class="hero-bg" aria-hidden="true"><img src="assets/hero.webp" width="576" height="765" alt=""></div>
+  <div class="wrap">
+    <p class="label in-a" style="--d:0">Teófilo Otoni — Minas Gerais</p>
+    <h1 class="in-a" style="--d:1">Studio Pabiana<br><em>Oliveira</em></h1>
+    <p class="lead in-a" style="--d:2">Uma experiência de beleza pensada nos detalhes — cabelo, sobrancelhas e maquiagem em um ambiente acolhedor, com atendimento dedicado a cada cliente.</p>
+    <div class="btn-row in-a" style="--d:3">
+      <a class="btn btn-gold" data-wa href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8z"/><path d="M9.5 9.5c.3 1.6 1.4 3.2 3 4.1l1-1 1.8.9-.4 1.4c-2.8.3-6.2-2.8-6-5.8l1.4-.4z" fill="currentColor" stroke="none"/></svg>Agendar pelo WhatsApp</a>
+      <a class="btn btn-line" href="#servicos">Ver serviços</a>
+    </div>
+    <a class="scroll in-a" style="--d:4" href="#studio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v16M6 14l6 6 6-6"/></svg>Role para descobrir</a>
+  </div>
+</section>
+
+<div data-home>
+  <div class="photo center" style="padding-top:40px"><div class="frame" data-reveal><img src="assets/pabiana-pb.webp" width="520" height="694" alt="Pabiana Oliveira sorrindo, em foto preto e branco" loading="lazy"></div></div>
+</div>
+
+<section class="sec studio" id="studio" data-home>
+  <div class="wrap studio-grid">
+    <div>
+      <p class="label" data-reveal>O Studio</p>
+      <h2 data-reveal>Realçando a sua beleza e <em>elevando a sua autoestima</em></h2>
+      <p data-reveal>O Studio Pabiana Oliveira fica no coração de Teófilo Otoni, no City Shopping. Um espaço pensado para receber bem, onde cada atendimento acontece com calma, atenção e capricho do início ao fim.</p>
+    </div>
+    <div class="cats" data-reveal><div>Cabelos</div><div>Sobrancelhas</div><div>Maquiagem</div></div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true" data-home>
+  <div class="t"><span>Cabelos</span><span>Corte</span><span>Coloração</span><span>Sobrancelhas</span><span>Maquiagem</span><span>Babyliss</span><span>Penteados</span><span>Cabelos</span><span>Corte</span><span>Coloração</span><span>Sobrancelhas</span><span>Maquiagem</span><span>Babyliss</span><span>Penteados</span></div>
+</div>
+
+<!-- Serviços -->
+<section class="sec" id="servicos" data-home>
+  <div class="wrap">
+    <div class="svc-head">
+      <p class="label" data-reveal>Catálogo</p>
+      <h2 data-reveal>Serviços</h2>
+      <p data-reveal>Valores por categoria. No celular, toque no título da categoria para abrir a lista completa.</p>
+    </div>
+    <div class="svc-list">
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false">Escovas<span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Escova C.M</b><span class="pr">R$ 50</span></div>
+          <div class="item"><b>Escova G.G</b><span class="pr">R$ 70</span></div>
+          <div class="item"><b>Escova E.G</b><span class="pr">R$ 80</span></div>
+          <div class="sub"><p class="label dim">Combo escova + prancha</p>
+            <div class="item"><b>C.M</b><span class="pr">R$ 60</span></div>
+            <div class="item"><b>G.G</b><span class="pr">R$ 80</span></div>
+            <div class="item"><b>E.G</b><span class="pr">R$ 100</span></div>
+          </div>
+        </div></div></div>
+      </div>
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false">Corte<span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Higienização + Corte (à escolha) + Finalização</b><span class="pr">R$ 120</span></div>
+        </div></div></div>
+      </div>
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false">Coloração e Descoloração<span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Mechas</b><span class="pr">A partir de R$ 600</span><small>Pré química + Descoloração + Matização + Pós química + Finalização</small></div>
+          <div class="item"><b>Aplicação de coloração</b><span class="pr">R$ 50</span><small>Com produto da cliente, não inclui finalização</small></div>
+          <div class="item"><b>Combo coloração — Retoque de raiz</b><span class="pr">R$ 200</span><small>Coloração/tonalizante linha profissional + Tratamento pós química + Finalização</small></div>
+          <div class="item"><b>Combo cabelo todo</b><span class="pr">A partir de R$ 270</span><small>Coloração/tonalizante linha profissional + Tratamento pós química + Finalização</small></div>
+        </div></div></div>
+      </div>
+      <div class="svc-photo" data-reveal><img src="assets/pabiana-sentada.webp" width="520" height="781" alt="Pabiana Oliveira sentada com blazer vermelho, ao lado de secadores e pranchas" loading="lazy"></div>
+      <div class="box static" data-reveal>
+        <h3>Maquiagens</h3>
+        <div class="items">
+          <div class="item"><b>Maquiagem básica express</b><span class="pr">R$ 150</span><small>Não inclui cílios, batons escuros/vermelhos ou delineados</small></div>
+          <div class="item"><b>Maquiagem social</b><span class="pr">R$ 200</span><small>Completa à escolha</small></div>
+        </div>
+      </div>
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false">Sobrancelhas<span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Design</b><span class="pr">R$ 50</span><small>Visagismo + epilação com cera e pinça</small></div>
+          <div class="item"><b>Design com hena ou coloração</b><span class="pr">R$ 60</span><small>Visagismo + epilação + aplicação de hena ou coloração</small></div>
+          <div class="item"><b>Brow Lamination</b><span class="pr">R$ 120</span><small>Alongamento dos fios + visagismo + epilação + aplicação de coloração</small></div>
+        </div></div></div>
+      </div>
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false">Babyliss<span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Cabelos P.M</b><span class="pr">R$ 50</span></div>
+          <div class="item"><b>Cabelos G.GG</b><span class="pr">R$ 80</span></div>
+          <div class="item"><b>Cabelos E.G</b><span class="pr">R$ 100</span></div>
+        </div></div></div>
+      </div>
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false">Penteados<span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Coque</b><span class="pr">R$ 150 a R$ 200</span></div>
+          <div class="item"><b>Semi preso</b><span class="pr">R$ 130 a R$ 150</span></div>
+        </div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tratamentos -->
+<section class="sec trt" id="tratamentos" data-home>
+  <div class="wrap">
+    <p class="label" data-reveal>Cuidado capilar</p>
+    <h2 data-reveal>Tratamentos</h2>
+    <p class="note" data-reveal>Todos os tratamentos incluem escova.</p>
+    <div class="trt-grid">
+      <div class="trt-card" data-reveal><h3>Hidratação</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 120</span></div><div><small>Longos / cheios</small><span>R$ 130</span></div></div></div>
+      <div class="trt-card" data-reveal><h3>Nutrição</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 130</span></div><div><small>Longos / cheios</small><span>R$ 140</span></div></div></div>
+      <div class="trt-card" data-reveal><h3>Reparação</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 150</span></div><div><small>Longos / cheios</small><span>R$ 170</span></div></div></div>
+      <div class="trt-card" data-reveal><h3>Reconstrução</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 150</span></div><div><small>Longos / cheios</small><span>R$ 170</span></div></div></div>
+      <div class="trt-card" data-reveal><h3>Reduci</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 160</span></div><div><small>Longos / cheios</small><span>R$ 180</span></div></div></div>
+      <div class="trt-card" data-reveal><h3>Detox</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 130</span></div><div><small>Longos / cheios</small><span>R$ 150</span></div></div></div>
+      <div class="trt-card" data-reveal><h3>Hidrolipídico</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 140</span></div><div><small>Longos / cheios</small><span>R$ 160</span></div></div></div>
+      <div class="trt-card" data-reveal><h3>Terapia capilar</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 150</span></div><div><small>Longos / cheios</small><span>R$ 180</span></div></div></div>
+    </div>
+    <div class="crono" data-reveal>
+      <p class="label">Cronograma capilar</p>
+      <p>Montado de acordo com a necessidade de cada cabelo.</p>
+      <div style="margin-top:6px">
+        <div class="row"><b>4 sessões</b><span>10% de desconto</span></div>
+        <div class="row"><b>6 sessões</b><span>15% de desconto</span></div>
+        <div class="row"><b>8 sessões</b><span>20% de desconto</span></div>
+      </div>
+      <p class="small">Desconto válido apenas para fechamento de pacote.</p>
+      <p class="note" style="margin-top:46px">Todos os tratamentos incluem escova.</p>
+    </div>
+  </div>
+</section>
+
+<div data-home>
+  <div class="photo"><div class="frame" data-reveal><img src="assets/pabiana-em-pe.webp" width="520" height="650" alt="Pabiana Oliveira de blazer vermelho, sorrindo e segurando um secador" loading="lazy"></div></div>
+</div>
+
+<!-- Liso Perfeito -->
+<section class="sec liso" id="liso" data-home>
+  <div class="wrap">
+    <h2 class="ttl" data-reveal>Protocolo <em>Liso Perfeito</em></h2>
+    <div class="liso-grid">
+      <div class="lbox" data-reveal>
+        <p class="label">Retoque de raiz</p>
+        <p class="lsub">A partir de</p>
+        <div class="items">
+          <div class="item"><b>Poucos / médios</b><span class="pr">R$ 250</span></div>
+          <div class="item"><b>Cheios</b><span class="pr">R$ 280</span></div>
+        </div>
+      </div>
+      <div class="lbox" data-reveal>
+        <p class="label">Adicionais</p>
+        <div class="items">
+          <div class="item"><b>Pré química</b><span class="pr">R$ 60</span></div>
+          <div class="item"><b>Pós química</b><span class="pr">R$ 70</span></div>
+          <div class="item"><b>Corte</b><span class="pr">R$ 30</span></div>
+        </div>
+      </div>
+      <div class="lbox hl" data-reveal>
+        <p class="label">Combo Protocolo Liso Perfeito</p>
+        <p class="lsub">Pré ou pós química + Alisamento + corte</p>
+        <div class="items">
+          <div class="item"><b>Poucos / médios</b><span class="pr">De R$ 300 a R$ 350</span></div>
+          <div class="item"><b>Cheios</b><span class="pr">De R$ 350 a R$ 380</span></div>
+          <div class="item"><b>Raiz ao meio</b><span class="pr sm">Valor sob avaliação</span></div>
+          <div class="item"><b>Cabelo todo</b><span class="pr sm">Valor sob avaliação</span></div>
+        </div>
+        <p class="inc">Inclui corte.</p>
+      </div>
+    </div>
+    <div class="extras" data-reveal>
+      <p class="label dim">Serviços extras</p>
+      <div class="items" style="max-width:640px">
+        <div class="item"><b>Retoque de raiz — franja + escova</b><span class="pr">R$ 90</span></div>
+        <div class="item"><b>Retoque de raiz — franja e uma pequena parte da lateral + escova</b><span class="pr">R$ 120</span></div>
+        <div class="item"><b>Retoque de raiz — franja + nuca + lateral + escova</b><span class="pr">R$ 130</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resultados -->
+<section class="sec res" id="resultados" data-home style="padding-bottom:50px">
+  <div class="wrap">
+    <p class="label" data-reveal>Studio</p>
+    <h2 data-reveal>Resultados</h2>
+  </div>
+  <div class="track" id="track">
+    <figure class="slide" style="margin:0"><img src="assets/espaco.webp" width="442" height="440" alt="Recepção do studio com poltronas rosadas e o letreiro Pabiana Oliveira" loading="lazy"><span>O espaço</span></figure>
+    <figure class="slide" style="margin:0"><img src="assets/recepcao.webp" width="520" height="426" alt="Poltronas e arranjo de flores na recepção do studio" loading="lazy"><span>Recepção</span></figure>
+  </div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<div data-home>
+  <div class="photo center"><div class="frame" data-reveal style="max-width:576px"><img src="assets/pabiana-atendimento.webp" width="576" height="866" alt="Pabiana Oliveira sorrindo, sentada com um tablet" loading="lazy"></div></div>
+</div>
+
+<!-- Agende -->
+<section class="sec agenda" id="agendar" data-home>
+  <div class="wrap">
+    <p class="label" data-reveal>Atendimento</p>
+    <h2 data-reveal>Agende seu <em>horário</em></h2>
+    <p class="l" data-reveal>Fale direto pelo WhatsApp e reserve o seu momento no Studio Pabiana Oliveira. Será um prazer receber você.</p>
+    <div class="hours" data-reveal><b>Segunda a sábado, das 8h às 18h</b><small>Atendimento com horário agendado com antecedência.</small></div>
+    <a class="btn btn-gold" data-wa href="#" target="_blank" rel="noopener" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8z"/><path d="M9.5 9.5c.3 1.6 1.4 3.2 3 4.1l1-1 1.8.9-.4 1.4c-2.8.3-6.2-2.8-6-5.8l1.4-.4z" fill="currentColor" stroke="none"/></svg>Agendar pelo WhatsApp</a>
+    <span class="tel">(33) 98815-3303</span>
+  </div>
+</section>
+
+<!-- Siga -->
+<section class="sec follow" data-home>
+  <div class="wrap">
+    <h2 data-reveal>Siga o Studio Pabiana Oliveira</h2>
+    <a class="handle" data-ig href="#" target="_blank" rel="noopener" data-reveal>@studio_pabianaoliveira</a>
+    <div class="btns" data-reveal>
+      <a class="btn btn-line" data-ig href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor"/></svg>Ver Instagram</a>
+      <a class="btn btn-line" href="#trabalhos">Conheça nossos resultados</a>
+    </div>
+  </div>
+</section>
+
+<!-- Onde estamos -->
+<section class="sec where" id="onde" data-home>
+  <div class="wrap">
+    <p class="label" data-reveal>Localização</p>
+    <h2 data-reveal>Onde estamos</h2>
+    <div class="where-grid">
+      <div class="addr" data-reveal>
+        <address>City Shopping<br>Rua Jorge Mattar, nº 40<br>Sala 107-A<br>1º andar<br>Centro<br>Teófilo Otoni - MG<br>CEP 39800-078</address>
+        <a class="btn btn-line" data-maps href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Como chegar</a>
+      </div>
+      <div class="map" id="map" data-reveal><div class="ph">City Shopping · Rua Jorge Mattar, 40<br>Teófilo Otoni - MG</div></div>
+      <div class="where-photo" data-reveal><img src="assets/recepcao.webp" width="520" height="426" alt="Recepção do Studio Pabiana Oliveira" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOSSOS TRABALHOS ===== -->
+<section class="trab" id="trabalhos-view" data-trab>
+  <div class="wrap">
+    <p class="label">Studio Pabiana Oliveira</p>
+    <h1>Nossos <em>trabalhos</em></h1>
+    <p>Uma seleção de cabelos, penteados e maquiagens realizados no studio.</p>
+    <a class="btn btn-line" href="#inicio" data-go-home><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Voltar ao início</a>
+    <div class="gal">
+      <img src="assets/trabalhos/t01.webp" width="252" height="336" alt="Cabelo liso com reflexos, visto de costas" loading="lazy">
+      <span></span>
+      <img class="full" src="assets/trabalhos/t02.webp" width="520" height="693" alt="Cabelo cacheado volumoso com mechas" loading="lazy">
+      <img src="assets/trabalhos/t03.webp" width="252" height="337" alt="Cliente com cabelo ondulado e mechas" loading="lazy">
+      <img src="assets/trabalhos/t04.webp" width="252" height="335" alt="Cabelo liso acobreado, visto de costas" loading="lazy">
+      <img src="assets/trabalhos/t05.webp" width="252" height="336" alt="Cliente com cabelo ondulado escuro" loading="lazy">
+      <img src="assets/trabalhos/t06.webp" width="252" height="335" alt="Cabelo longo com mechas e ondas" loading="lazy">
+      <img class="full" src="assets/trabalhos/t07.webp" width="520" height="694" alt="Penteado com cachos e tiara" loading="lazy">
+      <img src="assets/trabalhos/t08.webp" width="252" height="336" alt="Cliente com cabelo cacheado e vestido azul" loading="lazy">
+      <img src="assets/trabalhos/t09.webp" width="252" height="335" alt="Cliente com cabelo escuro cacheado" loading="lazy">
+      <img src="assets/trabalhos/t10.webp" width="252" height="337" alt="Penteado semi preso com cachos" loading="lazy">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <h2>Studio Pabiana Oliveira</h2>
+    <div class="info">
+      <span>WhatsApp: <a data-wa href="#" target="_blank" rel="noopener">(33) 98815-3303</a></span>
+      <span>Instagram: <a data-ig href="#" target="_blank" rel="noopener">@studio_pabianaoliveira</a></span>
+    </div>
+    <p class="addrs">City Shopping - Rua Jorge Mattar, 40 - Sala 107-A - Centro - Teófilo Otoni - MG</p>
+    <p class="copy">© Studio Pabiana Oliveira</p>
+  </div>
+</footer>
+
+<a class="wa" data-wa href="#" target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.7-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+
+<script>
+(function(){
+  "use strict";
+  const doc = document.documentElement;
+  doc.classList.add("js");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const PHONE = "5533988153303";
+  const MSG = "Olá, Pabiana! Gostaria de agendar um horário no Studio Pabiana Oliveira.";
+  const IG = "https://www.instagram.com/studio_pabianaoliveira/";
+  const ADDRESS = "City Shopping, Rua Jorge Mattar, 40, Centro, Teófilo Otoni - MG, 39800-078";
+  const WA = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(MSG);
+  const MAPS = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(ADDRESS);
+  document.querySelectorAll("[data-wa]").forEach(a => a.href = WA);
+  document.querySelectorAll("[data-ig]").forEach(a => a.href = IG);
+  document.querySelectorAll("[data-maps]").forEach(a => a.href = MAPS);
+
+  /* Mapa (fora do visualizador do Claude) */
+  if (!window.claude) {
+    const m = document.getElementById("map"); const f = document.createElement("iframe");
+    f.title = "Mapa do Studio Pabiana Oliveira"; f.loading = "lazy"; f.referrerPolicy = "no-referrer-when-downgrade";
+    f.src = "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed"; m.appendChild(f);
+  }
+
+  /* Entrada */
+  if (reduce) doc.classList.add("ready"); else setTimeout(() => requestAnimationFrame(() => doc.classList.add("ready")), 80);
+
+  /* Cabeçalho */
+  const top = document.getElementById("top");
+  const onScroll = () => top.classList.toggle("solid", scrollY > 40 || doc.classList.contains("view-trabalhos"));
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  /* Revelação */
+  let io = null;
+  if (!reduce && "IntersectionObserver" in window) io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px", threshold: .06 });
+  const armReveal = () => {
+    if (!io) return;
+    document.querySelectorAll("[data-reveal]").forEach(el => { if (el.classList.contains("in") || el.offsetParent === null) return; if (el.getBoundingClientRect().top > innerHeight * .92) { el.classList.add("pre"); io.observe(el); } });
+  };
+  armReveal();
+
+  /* Menu */
+  const ov = document.getElementById("overlay"), ob = document.getElementById("open-menu"), cb = document.getElementById("close-menu");
+  const setMenu = (o) => { ov.classList.toggle("open", o); ob.setAttribute("aria-expanded", String(o)); document.body.style.overflow = o ? "hidden" : ""; if (o) cb.focus(); };
+  ob.addEventListener("click", () => setMenu(true));
+  cb.addEventListener("click", () => setMenu(false));
+  ov.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+  addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+
+  /* Páginas: início x Nossos trabalhos */
+  const route = () => {
+    const t = location.hash === "#trabalhos";
+    doc.classList.toggle("view-trabalhos", t);
+    if (t) scrollTo(0, 0);
+    onScroll(); armReveal();
+  };
+  addEventListener("hashchange", route); route();
+  document.querySelectorAll("[data-go-home]").forEach(a => a.addEventListener("click", (e) => {
+    if (!doc.classList.contains("view-trabalhos")) return;
+    const target = a.getAttribute("href");
+    e.preventDefault();
+    history.pushState(null, "", target);
+    doc.classList.remove("view-trabalhos"); onScroll();
+    requestAnimationFrame(() => { const el = document.querySelector(target); if (el) el.scrollIntoView(); armReveal(); });
+  }));
+
+  /* Acordeões (no computador ficam abertos) */
+  const desk = matchMedia("(min-width:900px)");
+  document.querySelectorAll(".acc > button").forEach(b => b.addEventListener("click", () => {
+    if (desk.matches) return;
+    const a = b.parentElement; const o = !a.classList.contains("open");
+    a.classList.toggle("open", o); b.setAttribute("aria-expanded", String(o));
+  }));
+
+  /* Carrossel */
+  const track = document.getElementById("track"), dots = document.getElementById("dots");
+  const slides = [...track.children];
+  slides.forEach((s, i) => { const d = document.createElement("button"); d.type = "button"; d.setAttribute("aria-label", "Foto " + (i + 1)); d.addEventListener("click", () => track.scrollTo({ left: s.offsetLeft - track.offsetLeft - parseFloat(getComputedStyle(track).paddingLeft), behavior: reduce ? "auto" : "smooth" })); dots.appendChild(d); });
+  const mark = () => { let b = 0, bd = 1e9; slides.forEach((s, i) => { const d = Math.abs(s.getBoundingClientRect().left - track.getBoundingClientRect().left - 20); if (d < bd) { bd = d; b = i; } }); [...dots.children].forEach((d, i) => d.classList.toggle("on", i === b)); };
+  track.addEventListener("scroll", () => requestAnimationFrame(mark), { passive: true }); mark();
+})();
+</script>
+</body>
+</html>
