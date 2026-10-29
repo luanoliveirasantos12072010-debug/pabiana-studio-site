@@ -209,8 +209,8 @@ section[id]{scroll-margin-top:80px}
 @media (min-width:900px){.trt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.crono{max-width:560px}}
 
 /* Liso Perfeito */
-.liso .ttl{text-align:center;font-size:clamp(2.4rem,1.8rem + 2.4vw,3.4rem)}
-.liso .ttl em{display:block;color:var(--gold-1)}
+.liso h2.ttl{text-align:center;font-size:clamp(2.4rem,1.8rem + 2.4vw,3.4rem)}
+.liso h2.ttl em{display:block;color:var(--gold-1)}
 .liso-grid{display:grid;gap:16px;margin-top:46px}
 .lbox{border:1px solid var(--line);background:var(--card);padding:30px 22px 12px}
 .lbox .label{font-size:11px;letter-spacing:.42em;line-height:1.7}
@@ -222,6 +222,16 @@ section[id]{scroll-margin-top:80px}
 .extras .items{padding:20px 0 0}
 @media (min-width:900px){.liso-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}}
 
+.liso .center-l{text-align:center}
+.liso h2.ttl{margin-top:16px}
+.liso-intro{text-align:center;color:var(--muted);font-size:14.5px;margin-top:18px}
+.liso-list{display:flex;flex-direction:column;gap:14px;max-width:780px;margin:40px auto 0}
+.liso-list .lsub{color:var(--muted);font-size:13.5px;padding-top:4px}
+.liso-list .inc{font-size:15px;padding:12px 0 4px}
+.box.hl{border-color:rgba(216,189,150,.45)}
+.trt-card.acc{padding:0}
+.trt-card .pair{padding:4px 0 6px}
+.trt-grid{align-items:start}
 /* Resultados */
 .res h2{font-size:clamp(2.6rem,2rem + 2.4vw,3.6rem);margin-top:16px}
 .track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:36px var(--gr) 10px var(--gl);scrollbar-width:none}
@@ -310,7 +320,7 @@ section[id]{scroll-margin-top:80px}
   <div class="wrap">
     <a class="logo" href="#inicio" data-go-home><b>Pabiana Oliveira</b><small>Studio de Beleza</small></a>
     <nav class="desk-nav" aria-label="Seções">
-      <a href="#servicos" data-go-home>Serviços</a><a href="#tratamentos" data-go-home>Tratamentos</a><a href="#liso" data-go-home>Liso Perfeito</a><a href="#onde" data-go-home>Onde estamos</a><a href="#trabalhos">Trabalhos</a>
+      <a href="#liso" data-go-home>Liso Perfeito</a><a href="#tratamentos" data-go-home>Tratamentos</a><a href="#servicos" data-go-home>Serviços</a><a href="#onde" data-go-home>Onde estamos</a><a href="#trabalhos">Trabalhos</a>
     </nav>
     <a class="btn btn-line top-cta" data-wa href="#" target="_blank" rel="noopener">Agendar</a>
     <button class="menu-btn" id="open-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 7h14M5 12h14M5 17h14"/></svg></button>
@@ -323,9 +333,9 @@ section[id]{scroll-margin-top:80px}
     <button class="menu-btn" id="close-menu" type="button" aria-label="Fechar menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
   <nav>
-    <a href="#servicos" data-go-home>Serviços</a>
-    <a href="#tratamentos" data-go-home>Tratamentos</a>
     <a href="#liso" data-go-home>Liso Perfeito</a>
+    <a href="#tratamentos" data-go-home>Tratamentos</a>
+    <a href="#servicos" data-go-home>Serviços</a>
     <a href="#onde" data-go-home>Onde estamos</a>
     <a href="#trabalhos">Nossos trabalhos</a>
     <a class="btn btn-gold" data-wa href="#" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
@@ -367,6 +377,137 @@ section[id]{scroll-margin-top:80px}
 <div class="marquee" aria-hidden="true" data-home>
   <div class="t"><span>Escovas</span><span>Corte</span><span>Coloração</span><span>Sobrancelhas</span><span>Maquiagem</span><span>Babyliss</span><span>Penteados</span><span>Tratamentos</span><span>Escovas</span><span>Corte</span><span>Coloração</span><span>Sobrancelhas</span><span>Maquiagem</span><span>Babyliss</span><span>Penteados</span><span>Tratamentos</span></div>
 </div>
+
+<!-- Liso Perfeito -->
+<section class="sec liso" id="liso" data-home>
+  <div class="wrap">
+    <p class="label center-l" data-reveal>Protocolo exclusivo</p>
+    <h2 class="ttl" data-reveal>Protocolo <em>Liso Perfeito</em></h2>
+    <p class="liso-intro" data-reveal>Toque no + para ver os valores de cada etapa do protocolo.</p>
+    <div class="liso-list">
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Retoque de raiz</span><span class="from">a partir de R$ 250</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <p class="lsub">Alisamento de raiz · a partir de</p>
+          <div class="item"><b>Pouca a média quantidade de cabelo</b><span class="pr">R$ 250</span></div>
+          <div class="item"><b>Cabelos cheios</b><span class="pr">R$ 280</span></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para retoque de raiz (Liso Perfeito) no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar retoque de raiz <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Adicionais</span><span class="from">a partir de R$ 30</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Pré química</b><span class="pr">R$ 60</span></div>
+          <div class="item"><b>Pós química</b><span class="pr">R$ 70</span></div>
+          <div class="item"><b>Corte</b><span class="pr">R$ 30</span></div>
+        </div></div></div>
+      </div>
+      <div class="box acc hl" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="kick">Mais completo</span><span class="nm">Combo Protocolo Liso Perfeito</span><span class="from">de R$ 300 a R$ 380</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <p class="lsub">Retoque de raiz · Alisamento + pré ou pós química + corte</p>
+          <div class="item"><b>Pouca a média quantidade de cabelo</b><span class="pr">De R$ 300 a R$ 330</span></div>
+          <div class="item"><b>Cabelos cheios</b><span class="pr">De R$ 350 a R$ 380</span></div>
+          <div class="item"><b>Raiz ao meio</b><span class="pr sm">Valor sob avaliação</span></div>
+          <div class="item"><b>Cabelo todo</b><span class="pr sm">Valor sob avaliação</span></div>
+          <p class="inc">Inclui corte.</p>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para o Combo Protocolo Liso Perfeito no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar o combo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Serviços extras</span><span class="from">a partir de R$ 90</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Retoque de raiz — franja + escova</b><span class="pr">R$ 90</span></div>
+          <div class="item"><b>Retoque de raiz — franja e uma pequena parte da lateral + escova</b><span class="pr">R$ 120</span></div>
+          <div class="item"><b>Retoque de raiz — franja + nuca + lateral + escova</b><span class="pr">R$ 130</span></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para retoque de raiz (serviço extra) no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar serviço extra <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-home>
+  <div class="photo center"><div class="frame" data-reveal><img src="assets/pabiana-em-pe.webp" width="1087" height="1599" alt="Pabiana Oliveira de blazer vermelho, sorrindo e segurando um secador" loading="lazy"></div></div>
+</div>
+
+<!-- Tratamentos -->
+<section class="sec trt" id="tratamentos" data-home>
+  <div class="wrap">
+    <p class="label" data-reveal>Cuidado capilar</p>
+    <h2 data-reveal>Tratamentos</h2>
+    <p class="note" data-reveal>Todos os tratamentos incluem escova.</p>
+    <div class="trt-grid">
+      <div class="box acc trt-card" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Hidratação</span><span class="from">a partir de R$ 120</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="pair"><div><small>Pouca a média quantidade</small><span>R$ 120</span></div><div><small>Longos ou cheios</small><span>R$ 130</span></div></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para hidratação no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar hidratação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc trt-card" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Nutrição</span><span class="from">a partir de R$ 130</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="pair"><div><small>Pouca a média quantidade</small><span>R$ 130</span></div><div><small>Longos ou cheios</small><span>R$ 140</span></div></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para nutrição no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar nutrição <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc trt-card" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Reparação</span><span class="from">a partir de R$ 150</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="pair"><div><small>Pouca a média quantidade</small><span>R$ 150</span></div><div><small>Longos ou cheios</small><span>R$ 170</span></div></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para reparação no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar reparação <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc trt-card" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Reconstrução</span><span class="from">a partir de R$ 150</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="pair"><div><small>Pouca a média quantidade</small><span>R$ 150</span></div><div><small>Longos ou cheios</small><span>R$ 170</span></div></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para reconstrução no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar reconstrução <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc trt-card" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Hidrolipídico</span><span class="from">a partir de R$ 140</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="pair"><div><small>Pouca a média quantidade</small><span>R$ 140</span></div><div><small>Longos ou cheios</small><span>R$ 160</span></div></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para hidrolipídico no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar hidrolipídico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc trt-card" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Detox</span><span class="from">a partir de R$ 130</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="pair"><div><small>Pouca a média quantidade</small><span>R$ 130</span></div><div><small>Longos ou cheios</small><span>R$ 150</span></div></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para detox no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar detox <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc trt-card" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Reduci</span><span class="from">a partir de R$ 160</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="pair"><div><small>Pouca a média quantidade</small><span>R$ 160</span></div><div><small>Longos ou cheios</small><span>R$ 180</span></div></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para reduci no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar reduci <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc trt-card" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Terapia capilar</span><span class="from">a partir de R$ 150</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="pair"><div><small>Pouca a média quantidade</small><span>R$ 150</span></div><div><small>Longos ou cheios</small><span>R$ 180</span></div></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para terapia capilar no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar terapia capilar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+    </div>
+    <div class="crono" data-reveal>
+      <p class="label">Cronograma capilar</p>
+      <p>Montado de acordo com a necessidade de cada cabelo.</p>
+      <div style="margin-top:6px">
+        <div class="row"><b>4 sessões</b><span>10% de desconto</span></div>
+        <div class="row"><b>6 sessões</b><span>15% de desconto</span></div>
+        <div class="row"><b>8 sessões</b><span>20% de desconto</span></div>
+      </div>
+      <p class="small">Desconto válido apenas para fechamento de pacote.</p>
+      <p class="note" style="margin-top:46px">Todos os tratamentos incluem escova.</p>
+    </div>
+  </div>
+</section>
 
 <!-- Serviços -->
 <section class="sec" id="servicos" data-home>
@@ -415,20 +556,20 @@ section[id]{scroll-margin-top:80px}
       </div>
       <div class="svc-photo mob" data-reveal><img src="assets/pabiana-sentada.webp" width="1066" height="1600" alt="Pabiana Oliveira sentada com blazer vermelho, ao lado de secadores e pranchas" loading="lazy"></div>
       <div class="box acc" data-reveal>
-        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Maquiagens</span><span class="from">a partir de R$ 150</span></span><span class="ic" aria-hidden="true"></span></button>
-        <div class="body"><div><div class="items">
-          <div class="item"><b>Maquiagem básica express</b><span class="pr">R$ 150</span><small>Não inclui cílios, batons escuros/vermelhos ou delineados</small></div>
-          <div class="item"><b>Maquiagem social</b><span class="pr">R$ 200</span><small>Completa à escolha</small></div>
-          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para maquiagem no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar maquiagem <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-        </div></div></div>
-      </div>
-      <div class="box acc" data-reveal>
         <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Sobrancelhas</span><span class="from">a partir de R$ 50</span></span><span class="ic" aria-hidden="true"></span></button>
         <div class="body"><div><div class="items">
           <div class="item"><b>Design</b><span class="pr">R$ 50</span><small>Visagismo + epilação com cera e pinça</small></div>
           <div class="item"><b>Design com hena ou coloração</b><span class="pr">R$ 60</span><small>Visagismo + epilação com cera e pinça + aplicação de hena ou coloração</small></div>
           <div class="item"><b>Brow Lamination</b><span class="pr">R$ 120</span><small>Alongamento dos fios + visagismo + epilação com cera e pinça + aplicação de coloração</small></div>
           <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para sobrancelhas no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar sobrancelhas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div></div></div>
+      </div>
+      <div class="box acc" data-reveal>
+        <button type="button" aria-expanded="false"><span class="ttl"><span class="nm">Maquiagens</span><span class="from">a partir de R$ 150</span></span><span class="ic" aria-hidden="true"></span></button>
+        <div class="body"><div><div class="items">
+          <div class="item"><b>Maquiagem básica express</b><span class="pr">R$ 150</span><small>Não inclui cílios, batons escuros/vermelhos ou delineados</small></div>
+          <div class="item"><b>Maquiagem social</b><span class="pr">R$ 200</span><small>Completa à escolha</small></div>
+          <a class="book" data-wa="Olá, Pabiana! Gostaria de agendar um horário para maquiagem no Studio Pabiana Oliveira." href="#" target="_blank" rel="noopener">Agendar maquiagem <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
         </div></div></div>
       </div>
       <div class="box acc" data-reveal>
@@ -450,85 +591,6 @@ section[id]{scroll-margin-top:80px}
       </div>
     </div>
     <aside class="svc-aside" aria-hidden="true"><img src="assets/pabiana-sentada.webp" width="1066" height="1600" alt="" loading="lazy"><p>Todos os atendimentos com horário agendado.<br>Fale com a Pabiana pelo WhatsApp.</p></aside>
-    </div>
-  </div>
-</section>
-
-<!-- Tratamentos -->
-<section class="sec trt" id="tratamentos" data-home>
-  <div class="wrap">
-    <p class="label" data-reveal>Cuidado capilar</p>
-    <h2 data-reveal>Tratamentos</h2>
-    <p class="note" data-reveal>Todos os tratamentos incluem escova.</p>
-    <div class="trt-grid">
-      <div class="trt-card" data-reveal><h3>Hidratação</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 120</span></div><div><small>Longos / cheios</small><span>R$ 130</span></div></div></div>
-      <div class="trt-card" data-reveal><h3>Nutrição</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 130</span></div><div><small>Longos / cheios</small><span>R$ 140</span></div></div></div>
-      <div class="trt-card" data-reveal><h3>Reparação</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 150</span></div><div><small>Longos / cheios</small><span>R$ 170</span></div></div></div>
-      <div class="trt-card" data-reveal><h3>Reconstrução</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 150</span></div><div><small>Longos / cheios</small><span>R$ 170</span></div></div></div>
-      <div class="trt-card" data-reveal><h3>Reduci</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 160</span></div><div><small>Longos / cheios</small><span>R$ 180</span></div></div></div>
-      <div class="trt-card" data-reveal><h3>Detox</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 130</span></div><div><small>Longos / cheios</small><span>R$ 150</span></div></div></div>
-      <div class="trt-card" data-reveal><h3>Hidrolipídico</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 140</span></div><div><small>Longos / cheios</small><span>R$ 160</span></div></div></div>
-      <div class="trt-card" data-reveal><h3>Terapia capilar</h3><div class="pair"><div><small>Poucos / médios</small><span>R$ 150</span></div><div><small>Longos / cheios</small><span>R$ 180</span></div></div></div>
-    </div>
-    <div class="crono" data-reveal>
-      <p class="label">Cronograma capilar</p>
-      <p>Montado de acordo com a necessidade de cada cabelo.</p>
-      <div style="margin-top:6px">
-        <div class="row"><b>4 sessões</b><span>10% de desconto</span></div>
-        <div class="row"><b>6 sessões</b><span>15% de desconto</span></div>
-        <div class="row"><b>8 sessões</b><span>20% de desconto</span></div>
-      </div>
-      <p class="small">Desconto válido apenas para fechamento de pacote.</p>
-      <p class="note" style="margin-top:46px">Todos os tratamentos incluem escova.</p>
-    </div>
-  </div>
-</section>
-
-
-<div data-home>
-  <div class="photo"><div class="frame" data-reveal><img src="assets/pabiana-em-pe.webp" width="1087" height="1599" alt="Pabiana Oliveira de blazer vermelho, sorrindo e segurando um secador" loading="lazy"></div></div>
-</div>
-
-<!-- Liso Perfeito -->
-<section class="sec liso" id="liso" data-home>
-  <div class="wrap">
-    <h2 class="ttl" data-reveal>Protocolo <em>Liso Perfeito</em></h2>
-    <div class="liso-grid">
-      <div class="lbox" data-reveal>
-        <p class="label">Retoque de raiz</p>
-        <p class="lsub">Alisamento de raiz · a partir de</p>
-        <div class="items">
-          <div class="item"><b>Pouca a média quantidade de cabelo</b><span class="pr">R$ 250</span></div>
-          <div class="item"><b>Cabelos cheios</b><span class="pr">R$ 280</span></div>
-        </div>
-      </div>
-      <div class="lbox" data-reveal>
-        <p class="label">Adicionais</p>
-        <div class="items">
-          <div class="item"><b>Pré química</b><span class="pr">R$ 60</span></div>
-          <div class="item"><b>Pós química</b><span class="pr">R$ 70</span></div>
-          <div class="item"><b>Corte</b><span class="pr">R$ 30</span></div>
-        </div>
-      </div>
-      <div class="lbox hl" data-reveal>
-        <p class="label">Combo Protocolo Liso Perfeito</p>
-        <p class="lsub">Retoque de raiz · Alisamento + pré ou pós química + corte</p>
-        <div class="items">
-          <div class="item"><b>Pouca a média quantidade</b><span class="pr">De R$ 300 a R$ 330</span></div>
-          <div class="item"><b>Cabelos cheios</b><span class="pr">De R$ 350 a R$ 380</span></div>
-          <div class="item"><b>Raiz ao meio</b><span class="pr sm">Valor sob avaliação</span></div>
-          <div class="item"><b>Cabelo todo</b><span class="pr sm">Valor sob avaliação</span></div>
-        </div>
-        <p class="inc">Inclui corte.</p>
-      </div>
-    </div>
-    <div class="extras" data-reveal>
-      <p class="label dim">Serviços extras</p>
-      <div class="items" style="max-width:640px">
-        <div class="item"><b>Retoque de raiz — franja + escova</b><span class="pr">R$ 90</span></div>
-        <div class="item"><b>Retoque de raiz — franja e uma pequena parte da lateral + escova</b><span class="pr">R$ 120</span></div>
-        <div class="item"><b>Retoque de raiz — franja + nuca + lateral + escova</b><span class="pr">R$ 130</span></div>
-      </div>
     </div>
   </div>
 </section>
